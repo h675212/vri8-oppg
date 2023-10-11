@@ -9,7 +9,6 @@ public class TODO {
 		return "Metoden " + methodName + " er ikke implementert";
 	}
 	
-	//Dette er en push og pull test
 	public static String constructor(String className) {
 				
 	   return "Konstruktøren for klassen " + className + " er ikke implementert";
