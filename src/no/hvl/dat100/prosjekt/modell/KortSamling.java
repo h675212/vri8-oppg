@@ -89,7 +89,7 @@ public class KortSamling {
 	 * Legger alle korta (hele kortstokken) til samlinga. Korta vil være sortert
 	 * slik at de normalt må stokkes før bruk.
 	 */
-	public void leggTilAlle() {
+	public void leggTilAlle() { //Eric
 		
 		// TODO - START
 		// Husk: bruk Regler.MAKS_KORT_FARGE for å få antall kort per farge
@@ -101,7 +101,7 @@ public class KortSamling {
 	/**
 	 * Fjerner alle korta fra samlinga slik at den blir tom.
 	 */
-	public void fjernAlle() {
+	public void fjernAlle() { //Eyvinn
 		
 		// TODO - START
 		
@@ -115,7 +115,7 @@ public class KortSamling {
 	 * @return siste kortet i samlinga, men det blir ikke fjernet. Dersom samalinga er tom, returneres
 	 *         null.
 	 */
-	public Kort seSiste() {
+	public Kort seSiste() { //Alvin
 		
 		// TODO - START
 		
@@ -131,7 +131,7 @@ public class KortSamling {
 	 * @return siste kortet i samlinga. Dersom samalinga er tom, returneres
 	 *         null.
 	 */
-	public Kort taSiste() {
+	public Kort taSiste() { //Alvin
 		
 		// TODO - START
 		
@@ -147,7 +147,7 @@ public class KortSamling {
 	 * 
 	 * @return true om kortet finst i samlinga, false ellers.
 	 */
-	public boolean har(Kort kort) {
+	public boolean har(Kort kort) { //Alvin
 		
 		// TODO - START
 		
@@ -167,7 +167,7 @@ public class KortSamling {
 	 * @return true om kortet blev fjernet fra samlinga, false ellers.
 	 */
 			 
-	public boolean fjern(Kort kort) {
+	public boolean fjern(Kort kort) { //Eyvinn
 		
 		// TODO - START
 		
@@ -182,7 +182,7 @@ public class KortSamling {
 	 * @return tabell av kort som er i samlingen, der kort skal ha samme rekkefølge
 	 *         som i kortsamlinga.
 	 */
-	public Kort[] getAllekort() {
+	public Kort[] getAllekort() { //Eric
 		
 		// TODO - START
 		Kort[] kortsamling = new Kort[antall];
