@@ -22,11 +22,9 @@ public class Bord {
 	 */
 	public Bord() {
 		
-		// TODO - START
-		
-	bunkeFra = new KortSamling();
-	bunkeTil = new KortSamling();
-	
+		// TODO - START		
+		 bunkeFra = new KortSamling();
+	     bunkeTil = new KortSamling();
 		// TODO - END
 	}
 	
@@ -60,14 +58,7 @@ public class Bord {
 	public boolean bunketilTom() {
 		
 		// TODO - START
-				
-		if (bunkeFra.erTom()) {
-			return true;
-		}else {
-			return false;
-		}
-		
-
+		return bunkeFra.erTom();		
 		// TODO - END
 	}
 
@@ -79,13 +70,7 @@ public class Bord {
 	public boolean bunkefraTom() {
 		
 		// TODO - START
-		
-	if (bunkeTil.erTom()) {
-		return true;
-	}else {
-		return false;
-	}
-	
+		return bunkeTil.erTom();
 		// TODO - END
 		
 	}
@@ -97,10 +82,8 @@ public class Bord {
 	 */
 	public int antallBunkeFra() {
 		
-		// TODO - START
-		
-	return bunkeFra.getAntalKort();
-
+		// TODO - START	
+		 return bunkeFra.getAntalKort();
 		// TODO - END
 	}
 
@@ -111,11 +94,8 @@ public class Bord {
 	 */
 	public int antallBunkeTil() {
 		
-		// TODO - START
-		
-	return bunkeTil.getAntalKort();
-	
-	
+		// TODO - START		
+		return bunkeTil.getAntalKort();
 	// TODO - END
 	}
 	
@@ -126,11 +106,11 @@ public class Bord {
 	public void vendOversteFraBunke() {
 		
 		// TODO - START
-		
-	    if (!bunkeFra.erTom()) {
-	        Kort øversteKort = bunkeFra.taSiste(); 
-	        bunkeTil.leggTil(øversteKort); 	    }
-	}
+		 Kort oversteKort = bunkeFra.taSiste();
+	        if (oversteKort != null) {
+	            bunkeTil.leggTil(oversteKort);
+	        }
+	      }
 		// TODO - END
 		
 	
@@ -140,20 +120,12 @@ public class Bord {
 	 * 
 	 * @return peker/referanse til det kort som blev tatt fra fra-bunken
 	 */
-	
 	public Kort taOversteFraBunke() {
 		
 		// TODO - START
-		
-		   if (bunkeFra.erTom()) { 
-		        return bunkeFra.taSiste(); 
-		    } else {
-		        return null; 
-		    }
-		}
+		return bunkeFra.taSiste();
+	}
 		// TODO - END
-	
-	
 	/**
 	 * Metode som leser øverste kortet i til-bunken. Kortet vil fremdeles være
 	 * øverst i til-bunken etter at metoden er utført.
@@ -163,15 +135,8 @@ public class Bord {
 	public Kort seOversteBunkeTil() {
 		
 		// TODO - START
-		
-	    if (bunkeTil.erTom()) { 
-	        return bunkeTil.seSiste();
-	    } else {
-	        return null; 
-	    }
-	
-	}
-	
+		 return bunkeTil.seSiste();
+	    }	
 	/**
 	 * Når fra-bunken blir tom, tar man vare på kortet pÂ toppen av til-bunken.
 	 * Deretter legges alle den andre kortene i til-bunken over i fra-bunken.
@@ -179,24 +144,15 @@ public class Bord {
 	 * til-bunken. Det vil nå være det eneste kortet i til-bunken.
 	 */
 	public void snuTilBunken() {
-
-	    if (bunkeFra.erTom() && !bunkeTil.erTom()) { // Sjekk om fra-bunken er tom og til-bunken har kort
-	        Kort øversteKort = bunkeTil.taUtSiste(); // Ta vare på kortet på toppen av til-bunken
-
-	        // Flytt alle de andre kortene fra til-bunken over til fra-bunken
-	        while (!bunkeTil.erTom()) {
-	            Kort kort = bunkeTil.taUtSiste();
-	            bunkeFra.leggTilKort(kort);
+	      if (bunkeFra.erTom() && !bunkeTil.erTom()) {
+	            Kort oversteKort = bunkeTil.taSiste();
+	            while (!bunkeTil.erTom()) {
+	                bunkeFra.leggTil(bunkeTil.taSiste());
+	            }
+	            KortUtils.stokk(bunkeFra);
+	            bunkeTil.leggTil(oversteKort);
 	        }
-
-	        // Stokk fra-bunken
-	        bunkeFra.stokkKortene();
-
-	        // Legg kortet du tok vare på tilbake i til-bunken
-	        bunkeTil.leggTilKort(øversteKort);
 	    }
-	}
-		
 	/**
 	 * Metode som legger et kort i til-bunken. 
 	 * 
@@ -204,12 +160,11 @@ public class Bord {
 	 * 			kort som skal legges ned. 
 	 * 	
 	 */
-	public void leggNedBunkeTil(Kort k) {
+	public void leggNedBunkeTil(Kort kort) {
 		
 		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
+		   bunkeTil.leggTil(kort);
+		}
 		// TODO - END
 				
 	}
-}
