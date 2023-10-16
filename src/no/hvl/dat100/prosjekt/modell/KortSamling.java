@@ -90,6 +90,15 @@ public class KortSamling {
 	 * slik at de normalt må stokkes før bruk.
 	 */
 	public void leggTilAlle() { //Eric
+		int index = 0;
+		for (Kortfarge farge : Kortfarge.values()) {
+			for (int verdi = 1; verdi <=Regler.MAKS_KORT_FARGE; verdi++) {
+				samling[index] = new Kort(farge,verdi);
+				antall += 1;
+				index += 1;		
+			}		
+			
+		}	
 		
 		// TODO - START
 		// Husk: bruk Regler.MAKS_KORT_FARGE for å få antall kort per farge
@@ -213,9 +222,9 @@ public class KortSamling {
 		kortsamling[i] = samling[i];		
 	}
 		// TODO - START
-		throw new UnsupportedOperationException(TODO.method());
-			
+
 		}
+
 		// TODO - END
 	
 	}
