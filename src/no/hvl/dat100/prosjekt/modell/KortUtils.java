@@ -35,11 +35,8 @@ public class KortUtils {
 	                }
 	            }
 	        }
-	    }
-
-		
+	    }		
 		// TODO - END
-	
 	/**
 	 * Stokkar en kortsamling. 
 	 * 
