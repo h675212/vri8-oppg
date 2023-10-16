@@ -20,9 +20,8 @@ public class KortUtils {
 	
 	public static void sorter(KortSamling samling) {
 		// TODO - START
-	        Kort[] kortTabell = samling.getSamling();
-	        int antallKort = samling.getAntalKort();
 
+<<<<<<< HEAD
 	        // Bruk en enkel boblesortering for å sortere kortene
 	        for (int i = 0; i < antallKort - 1; i++) {
 	            for (int j = 0; j < antallKort - i - 1; j++) {
@@ -36,6 +35,8 @@ public class KortUtils {
 	            }
 	        }
 	    }		
+=======
+>>>>>>> 6a2e4bbe8e8ccc1244d5c5bad3ebc24c1b3547e2
 		// TODO - END
 	/**
 	 * Stokkar en kortsamling. 
