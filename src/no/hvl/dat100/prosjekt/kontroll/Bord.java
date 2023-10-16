@@ -99,7 +99,7 @@ public class Bord {
 		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+	return bunkeFra.getAntalKort();
 
 		// TODO - END
 	}
@@ -113,9 +113,10 @@ public class Bord {
 		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+	return bunkeTil.getAntalKort();
+	
+	
+	// TODO - END
 	}
 	
 	/**
@@ -126,10 +127,13 @@ public class Bord {
 		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+	    if (!bunkeFra.erTom()) {
+	        Kort øversteKort = bunkeFra.taSiste(); 
+	        bunkeTil.leggTil(øversteKort); 	    }
+	}
 		// TODO - END
 		
-	}
+	
 		
 	/**
 	 * Tar øverste kortet fra fra-bunken.
@@ -141,10 +145,14 @@ public class Bord {
 		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
-
+		   if (bunkeFra.erTom()) { 
+		        return bunkeFra.taSiste(); 
+		    } else {
+		        return null; 
+		    }
+		}
 		// TODO - END
-	}
+	
 	
 	/**
 	 * Metode som leser øverste kortet i til-bunken. Kortet vil fremdeles være
@@ -156,9 +164,12 @@ public class Bord {
 		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+	    if (bunkeTil.erTom()) { 
+	        return bunkeTil.seSiste();
+	    } else {
+	        return null; 
+	    }
+	
 	}
 	
 	/**
@@ -169,10 +180,21 @@ public class Bord {
 	 */
 	public void snuTilBunken() {
 
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+	    if (bunkeFra.erTom() && !bunkeTil.erTom()) { // Sjekk om fra-bunken er tom og til-bunken har kort
+	        Kort øversteKort = bunkeTil.taUtSiste(); // Ta vare på kortet på toppen av til-bunken
+
+	        // Flytt alle de andre kortene fra til-bunken over til fra-bunken
+	        while (!bunkeTil.erTom()) {
+	            Kort kort = bunkeTil.taUtSiste();
+	            bunkeFra.leggTilKort(kort);
+	        }
+
+	        // Stokk fra-bunken
+	        bunkeFra.stokkKortene();
+
+	        // Legg kortet du tok vare på tilbake i til-bunken
+	        bunkeTil.leggTilKort(øversteKort);
+	    }
 	}
 		
 	/**
