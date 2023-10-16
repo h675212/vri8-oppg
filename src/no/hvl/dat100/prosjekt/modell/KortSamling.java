@@ -55,7 +55,6 @@ public class KortSamling {
 		// TODO - START
 		return antall;
 		// TODO - END
-		//FERDIG - Eyvinn
 	}
 	
 	/**
