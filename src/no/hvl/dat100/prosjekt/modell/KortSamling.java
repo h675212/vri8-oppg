@@ -102,16 +102,13 @@ public class KortSamling {
 		
 		// TODO - START
 		// Husk: bruk Regler.MAKS_KORT_FARGE for å få antall kort per farge
-		
-		throw new UnsupportedOperationException(TODO.method());
 		// TODO - END
 	}
 
 	/**
 	 * Fjerner alle korta fra samlinga slik at den blir tom.
 	 */
-	public void fjernAlle() { //Eyvinn
-		
+	public void fjernAlle() { //Eyvinn		
 		// TODO - START
 		    for (int i = 0; i < antall; i++) {
 		        fjern(samling[i]);
