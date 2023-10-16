@@ -161,8 +161,17 @@ public class KortSamling {
 	public boolean har(Kort kort) { //Alvin
 		
 		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
+	
+		 for (int i = 0; i<samling.length; i++) {
+			 if (samling[i] != null) {
+				 
+			 if (samling[i].equals(kort)) {
+				 return true;
+			 }
+		 }
+		 }
+		 
+		return false;
 		// return false;
 		// TODO - END
 		

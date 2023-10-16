@@ -19,7 +19,7 @@ public class KortUtils {
 		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+		
 		// TODO - END
 	}
 	
