@@ -24,7 +24,9 @@ public class Bord {
 		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.constructor("Bord"));
+	bunkeFra = new KortSamling();
+	bunkeTil = new KortSamling();
+	
 		// TODO - END
 	}
 	
@@ -59,7 +61,12 @@ public class Bord {
 		
 		// TODO - START
 				
-		throw new UnsupportedOperationException(TODO.method());
+		if (bunkeFra.erTom()) {
+			return true;
+		}else {
+			return false;
+		}
+		
 
 		// TODO - END
 	}
@@ -73,7 +80,11 @@ public class Bord {
 		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+	if (bunkeTil.erTom()) {
+		return true;
+	}else {
+		return false;
+	}
 	
 		// TODO - END
 		
