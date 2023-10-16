@@ -226,7 +226,6 @@ public class KortSamling {
 	public Kort[] getAllekort() { //Eric
 		
 	Kort [] kortsamling = new Kort[antall];
-	
 	for(int i = 0; i < kortsamling.length; i++) {
 		kortsamling[i] = samling[i];		
 	}
