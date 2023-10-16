@@ -104,8 +104,9 @@ public class KortSamling {
 	public void fjernAlle() { //Eyvinn
 		
 		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
+		    for (int i = 0; i < antall; i++) {
+		        fjern(samling[i]);
+		    }
 		// TODO - END
 	}
 	
@@ -180,11 +181,23 @@ public class KortSamling {
 	public boolean fjern(Kort kort) { //Eyvinn
 		
 		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
+		    for (int i = 0; i < antall; i++) {
+		        if (samling[i] != null && samling[i].equals(kort)) {
+		        	
+		            samling[i] = null;
+		            
+		            for (int j = i; j < antall - 1; j++) {
+		                samling[j] = samling[j + 1];
+		            }
+		            antall--;
+		            return true;
+		        }
+		    }
 
+		    return false;
+		}
 		// TODO - END
-	}
+
 
 	/**
 	 * Gir kortene som en tabell av samme lengde som antall kort i samlingen
@@ -195,13 +208,10 @@ public class KortSamling {
 	public Kort[] getAllekort() { //Eric
 		
 		// TODO - START
-		Kort[] kortsamling = new Kort[antall];
-		
-		for(int i = 0; i<kortsamling.length;i++) {
+		throw new UnsupportedOperationException(TODO.method());
 			
 		}
 		// TODO - END
 	
 	}
-	
-}
+
