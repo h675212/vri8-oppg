@@ -22,9 +22,11 @@ public class KortSamling {
 	 */
 	public KortSamling() {
 		
-		// TODO - START
+		//Genererer referansetabellen.
 		
-		throw new UnsupportedOperationException(TODO.constructor("KortSamling"));
+		// TODO - START
+		samling = new Kort[MAKS_KORT];
+		antall = 0;
 		// TODO - END
 	}
 
@@ -51,9 +53,7 @@ public class KortSamling {
 	public int getAntalKort() {
 		
 		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
+		return antall;
 		// TODO - END
 	}
 	
@@ -64,10 +64,8 @@ public class KortSamling {
 	 */
 	public boolean erTom() {
 		
-		// TODO - START
-				
-		throw new UnsupportedOperationException(TODO.method());
-		
+		// TODO - START		
+		return (antall == 0);
 		// TODO - END
 	}
 
@@ -80,8 +78,8 @@ public class KortSamling {
 	public void leggTil(Kort kort) {
 		
 		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
+		samling[antall] = kort;
+		antall += 1;
 		// TODO - END
 		
 	}
@@ -186,9 +184,11 @@ public class KortSamling {
 	public Kort[] getAllekort() {
 		
 		// TODO - START
+		Kort[] kortsamling = new Kort[antall];
 		
-		throw new UnsupportedOperationException(TODO.method());
-
+		for(int i = 0; i<kortsamling.length;i++) {
+			
+		}
 		// TODO - END
 	
 	}
