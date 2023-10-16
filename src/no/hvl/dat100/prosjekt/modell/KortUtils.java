@@ -6,6 +6,9 @@ import no.hvl.dat100.prosjekt.TODO;
 
 public class KortUtils {
 
+	public KortUtils() {
+		
+	}
 	/**
 	 * Sorterer en samling. Rekkefølgen er bestemt av compareTo() i Kort-klassen.
 	 * 
@@ -16,12 +19,9 @@ public class KortUtils {
 	 */
 	
 	public static void sorter(KortSamling samling) {
-		
 		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
+
 		// TODO - END
-	}
 	
 	/**
 	 * Stokkar en kortsamling. 
@@ -33,8 +33,21 @@ public class KortUtils {
 		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+	    Kort[] kortTabell = samling.getSamling();
+        int antallKort = samling.getAntalKort();
+        Random random = new Random();
+
+        // Bruk Fisher-Yates algoritme for å stokke kortene
+        for (int i = antallKort - 1; i > 0; i--) {
+            int j = random.nextInt(i + 1);
+            // Bytt plass på kortene
+            Kort temp = kortTabell[i];
+            kortTabell[i] = kortTabell[j];
+            kortTabell[j] = temp;
+        }
+    }
+
 		// TODO - END
-	}
-	
 }
+	
+

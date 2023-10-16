@@ -55,7 +55,6 @@ public class KortSamling {
 		// TODO - START
 		return antall;
 		// TODO - END
-		//FERDIG - Eyvinn
 	}
 	
 	/**
@@ -102,23 +101,20 @@ public class KortSamling {
 		
 		// TODO - START
 		// Husk: bruk Regler.MAKS_KORT_FARGE for å få antall kort per farge
-		
-		throw new UnsupportedOperationException(TODO.method());
 		// TODO - END
 	}
 
 	/**
 	 * Fjerner alle korta fra samlinga slik at den blir tom.
 	 */
-	public void fjernAlle() { //Eyvinn
-		
-		// TODO - START
-		    for (int i = 0; i < antall; i++) {
-		        fjern(samling[i]);
-		    }
-		// TODO - END
+	public void fjernAlle() {
+	    for (int i = 0; i < antall; i++) {
+	        samling[i] = null;
+	    }
+	    antall = 0;
 	}
-	
+
+		// TODO - END
 	/**
 	 * Ser på siste kortet i samlinga.
 	 * 
@@ -196,24 +192,19 @@ public class KortSamling {
 	 * @return true om kortet blev fjernet fra samlinga, false ellers.
 	 */
 			 
-	public boolean fjern(Kort kort) { //Eyvinn
-		
-		// TODO - START
-		    for (int i = 0; i < antall; i++) {
-		        if (samling[i] != null && samling[i].equals(kort)) {
-		        	
-		            samling[i] = null;
-		            
-		            for (int j = i; j < antall - 1; j++) {
-		                samling[j] = samling[j + 1];
-		            }
-		            antall--;
-		            return true;
-		        }
-		    }
+	public boolean fjern(Kort kort) {
+	    for (int i = 0; i < antall; i++) {
+	        if (samling[i] != null && samling[i].equals(kort)) {
+	            samling[i] = samling[antall - 1];
+	            samling[antall - 1] = null;
+	            antall--;
+	            return true;
+	        }
+	    }
 
-		    return false;
-		}
+	    return false;
+	}
+
 		// TODO - END
 
 
@@ -226,13 +217,15 @@ public class KortSamling {
 	public Kort[] getAllekort() { //Eric
 		
 	Kort [] kortsamling = new Kort[antall];
-	
 	for(int i = 0; i < kortsamling.length; i++) {
 		kortsamling[i] = samling[i];		
 	}
 		// TODO - START
 
+	return kortsamling;
+	
 		}
+	
 
 		// TODO - END
 	
