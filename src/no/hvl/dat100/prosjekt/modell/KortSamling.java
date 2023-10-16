@@ -232,7 +232,10 @@ public class KortSamling {
 	}
 		// TODO - START
 
+	return kortsamling;
+	
 		}
+	
 
 		// TODO - END
 	
