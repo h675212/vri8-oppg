@@ -11,7 +11,8 @@ public class Kort implements Comparable<Kort> {
 
 	private Kortfarge farge;
 	private int verdi;
-
+	
+	
 	/**
 	 * Oppretter et kort med gitt farge og verdi.
 	 * 
