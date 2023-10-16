@@ -119,7 +119,13 @@ public class KortSamling {
 		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+		 Kort Sistekort = null;
+		 for (int i = 0; i<samling.length; i++) {
+			 if(samling[i]!=null) {
+				 
+			 Sistekort = samling[i];} 
+		 }
+		 return Sistekort;
 
 		// TODO - END
 		
@@ -134,11 +140,15 @@ public class KortSamling {
 	public Kort taSiste() { //Alvin
 		
 		// TODO - START
+		kort sisteKort = seSiste();
 		
-		throw new UnsupportedOperationException(TODO.method());
+		fjern(sisteKort);
 		
+		return sisteKort;
+		 }
+		 
 		// TODO - END
-	}
+	
 	
 	/**
 	 * Undersøker om et kort finst i samlinga.
