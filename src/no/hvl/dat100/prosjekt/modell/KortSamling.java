@@ -141,7 +141,7 @@ public class KortSamling {
 	public Kort taSiste() { //Alvin
 		
 		// TODO - START
-		kort sisteKort = seSiste();
+		Kort sisteKort = seSiste();
 		
 		fjern(sisteKort);
 		
