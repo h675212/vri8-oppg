@@ -88,6 +88,13 @@ public class KortSamling {
 	 * Legger alle korta (hele kortstokken) til samlinga. Korta vil være sortert
 	 * slik at de normalt må stokkes før bruk.
 	 */
+	
+	
+	/*Denne metoden legger til alle kortene i en hel kortstokk i samlingen.
+	 * Den bruker en løkke for å opprette og legge til hvert kort i samlingen.
+	 * 
+	 */
+	
 	public void leggTilAlle() { //Eric
 		int index = 0;
 		for (Kortfarge farge : Kortfarge.values()) {
@@ -214,6 +221,13 @@ public class KortSamling {
 	 * @return tabell av kort som er i samlingen, der kort skal ha samme rekkefølge
 	 *         som i kortsamlinga.
 	 */
+	
+	/* Denne metoden retunerer alle kortene i samlingen som en kopi
+	 * i form av en ny tabell. Den kopierer kortene i en samlingen
+	 * til en ny tabell med samme lengde som antall kort i samlingen
+	 * og retunerer denne kopien
+	 */
+	
 	public Kort[] getAllekort() { //Eric
 		
 	Kort [] kortsamling = new Kort[antall];
